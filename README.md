@@ -1,6 +1,7 @@
 
 Freely adapted from:
-[How to Use FastAPI: Beginners Guide TheCodingSHIELD](https://www.youtube.com/watch?v=dRkeJOObNWI)
+Part 1 - [How to Use FastAPI: Beginners Guide TheCodingSHIELD](https://www.youtube.com/watch?v=dRkeJOObNWI)
+Part 2 - [How To Get Started With FastAPI A Practical Approach For Beginners TheCodingSHIELD](https://www.youtube.com/watch?v=LPWPRbLxBYc&t=328s) 
 
 Example schedule:
 1. Creating a FastAPI app
