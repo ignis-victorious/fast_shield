@@ -9,10 +9,14 @@ from db.students_db import students_db
 #  Import FILES
 from models.student import Student
 
+# from routers import student_router
+
 #
 
 
-app: FastAPI = FastAPI(title="Student API - Beginner Tutorial", description="A simple API for managing students")
+app: FastAPI = FastAPI(
+    title="Student API - Beginner Tutorial", description="A simple API for managing students", version="1.0.1"
+)
 
 
 @app.get(path="/")
