@@ -5,7 +5,8 @@ from pydantic import BaseModel, Field
 #  Import FILES
 #
 
-class Student (BaseModel):
+
+class Student(BaseModel):
     """
     A model representing a student in our school system.
     Think of this like a student ID card with all their information!
@@ -14,15 +15,16 @@ class Student (BaseModel):
     - Every student MUST have all these fields
     - The Field() function adds validation and documentation
     """
-    id: int = Field(..., description="Unique student ID number")
-    name: str = Field(..., description="Student's full name")
-    age: int = Field(..., ge=5, le=18, description="Student's age (between 5 and 18)")
-    grade: str = Field(..., description="Student's current grade level")
-    email: str = Field(..., description="Student's email address")
-    favorite_subject: str = Field(..., description="Student's favorite school subject")
+
+    id: int = Field(default=..., description="Unique student ID number")
+    name: str = Field(default=..., description="Student's full name")
+    age: int = Field(default=..., ge=5, le=18, description="Student's age (between 5 and 18)")
+    grade: str = Field(default=..., description="Student's current grade level")
+    email: str = Field(default=..., description="Student's email address")
+    favorite_subject: str = Field(default=..., description="Student's favorite school subject")
 
 
-class StudentCreate (BaseModel):
+class StudentCreate(BaseModel):
     """
     A model for creating new students (without the ID, since we"ll generate that)
     For Starters:
@@ -30,11 +32,18 @@ class StudentCreate (BaseModel):
     - Notice it's the same as Student but WITHOUT the ID
     The API will automatically generate a new ID
     """
-    fame: str = Field(..., description="Student's full name")
-    age: int = Field(..., ge=5, le=18, description="Student's age (between 5 and 18)")
-    grade: str = Field(..., description="Student's current grade level")
-    email: str = Field(..., description="Student's email address")
-    favorite_subject: str = Field(..., description="Student's favorite school subject")
+
+    name: str = Field(default=..., description="Student's full name")
+    age: int = Field(default=..., ge=5, le=18, description="Student's age (between 5 and 18)")
+    grade: str = Field(default=..., description="Student's current grade level")
+    email: str = Field(default=..., description="Student's email address")
+    favorite_subject: str = Field(default=..., description="Student's favorite school subject")
+
+    # name: str = Field(default=..., description="Student's full name")
+    # age: int = Field(default=..., ge=5, le=18, description="Student's age (between 5 and 18)")
+    # grade: str = Field(default=..., description="Student's current grade level")
+    # email: str = Field(default=..., description="Student's email address")
+    # favorite_subject: str = Field(default=..., description="Student's favorite school subject")
 
 
 # class Student(BaseModel):

@@ -1,7 +1,5 @@
-
-
 """
- : Database Package
+: Database Package
 
 This folder contains all our database-related code.
 For Starters:
@@ -10,11 +8,12 @@ For Starters:
 - Separating database code makes it easy to switch to a real database later!
 """
 
-
 #
 #  Import LIBRARIES
 #  Import FILES
-from mock dh import MockDatabase, get_database
+from .mock_db import MockDatabase, get_database
+
 #
 
-_all_: list[str] = ["MockDatabase", "get_database"]
+
+__all__: list[str] = ["MockDatabase", "get_database"]

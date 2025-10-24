@@ -13,7 +13,8 @@ class Subject(BaseModel):
     - This defines what information we store about each class/subject
     - Every subject has an ID, name, teacher, and room number
     """
-    id: int = Field(..., description="Unique subject ID")
-    name: str = Field(..., description="Subject name")
-    teacher: str = Field(..., description="Teacher's name")
-    room_number: str = Field(..., description="Classroom number")
+
+    id: int = Field(default=..., description="Unique subject ID")
+    name: str = Field(default=..., description="Subject name")
+    teacher: str = Field(default=..., description="Teacher's name")
+    room_number: str = Field(default=..., description="Classroom number")
